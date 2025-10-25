@@ -32,7 +32,7 @@ jobs:
       run: |
         .mvnw sonar:sonar \
           -Dsonar.projectkey=fleet-manager\
-          -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
+          -Dsonar.host.url=${{ vars.SONAR_HOST_URL }} \
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
